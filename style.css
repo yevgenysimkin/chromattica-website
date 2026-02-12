@@ -1,0 +1,159 @@
+:root {
+    --bg: #0e0e10;
+    --surface: #1a1a1f;
+    --text: #e4e4e7;
+    --text-muted: #9d9da5;
+    --accent: #7c5bf5;
+    --accent-hover: #6a4be0;
+    --border: #2a2a30;
+    --max-width: 800px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+header {
+    border-bottom: 1px solid var(--border);
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a {
+    color: var(--text);
+    text-decoration: none;
+}
+
+.logo {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+}
+
+nav a {
+    color: var(--text-muted);
+    text-decoration: none;
+    margin-left: 1.5rem;
+    font-size: 0.9rem;
+}
+
+nav a:hover {
+    color: var(--text);
+}
+
+main {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 3rem 2rem;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.03em;
+}
+
+h2 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+}
+
+h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    margin-bottom: 1rem;
+    color: var(--text-muted);
+}
+
+.subtitle {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+}
+
+ul, ol {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    color: var(--text-muted);
+}
+
+li {
+    margin-bottom: 0.4rem;
+}
+
+a {
+    color: var(--accent);
+}
+
+a:hover {
+    color: var(--accent-hover);
+}
+
+.hero {
+    text-align: center;
+    padding: 6rem 2rem 4rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--accent);
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+
+.btn:hover {
+    background: var(--accent-hover);
+    color: #fff;
+}
+
+footer {
+    border-top: 1px solid var(--border);
+    padding: 2rem;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+footer a {
+    color: var(--text-muted);
+    margin: 0 0.75rem;
+}
+
+footer a:hover {
+    color: var(--text);
+}
