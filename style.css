@@ -3,10 +3,13 @@
     --surface: #1a1a1f;
     --text: #e4e4e7;
     --text-muted: #9d9da5;
+    --text-faint: #55555e;
     --accent: #7c5bf5;
     --accent-hover: #6a4be0;
+    --orange: #f5a623;
     --border: #2a2a30;
     --max-width: 800px;
+    --wide-width: 1000px;
 }
 
 * {
@@ -23,6 +26,7 @@ body {
     min-height: 100vh;
 }
 
+/* Header */
 header {
     border-bottom: 1px solid var(--border);
     padding: 1rem 2rem;
@@ -37,9 +41,13 @@ header a {
 }
 
 .logo {
-    font-size: 1.25rem;
-    font-weight: 600;
-    letter-spacing: -0.02em;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo img {
+    height: 28px;
 }
 
 nav a {
@@ -53,6 +61,7 @@ nav a:hover {
     color: var(--text);
 }
 
+/* Content pages (terms, privacy) */
 main {
     max-width: var(--max-width);
     margin: 0 auto;
@@ -109,38 +118,187 @@ a:hover {
     color: var(--accent-hover);
 }
 
+/* Hero */
 .hero {
     text-align: center;
-    padding: 6rem 2rem 4rem;
+    padding: 5rem 2rem 3rem;
+    max-width: var(--wide-width);
+    margin: 0 auto;
 }
 
-.hero h1 {
-    font-size: 3rem;
+.hero-icon {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 1.5rem;
+    filter: drop-shadow(0 4px 24px rgba(245, 166, 35, 0.3));
+}
+
+.hero-wordmark {
+    height: 60px;
+    margin-bottom: 0.5rem;
+}
+
+.hero-ftmos {
+    color: var(--text-faint);
+    font-size: 0.8rem;
+    font-style: italic;
+    margin-bottom: 2rem;
+    letter-spacing: 0.05em;
+}
+
+.hero-tagline {
+    font-size: 1.35rem;
+    color: var(--text);
+    max-width: 650px;
+    margin: 0 auto 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.hero-sub {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    max-width: 550px;
+    margin: 0 auto 2.5rem;
+}
+
+/* Download buttons */
+.downloads {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
     margin-bottom: 1rem;
 }
 
-.hero p {
-    font-size: 1.1rem;
-    max-width: 600px;
-    margin: 0 auto 2rem;
-}
-
 .btn {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
     background: var(--accent);
     color: #fff;
-    padding: 0.75rem 1.5rem;
-    border-radius: 8px;
+    padding: 0.8rem 1.6rem;
+    border-radius: 10px;
     text-decoration: none;
     font-weight: 500;
-    transition: background 0.2s;
+    font-size: 1rem;
+    transition: background 0.2s, transform 0.15s;
 }
 
 .btn:hover {
     background: var(--accent-hover);
     color: #fff;
+    transform: translateY(-1px);
 }
 
+.btn-icon {
+    font-size: 1.2rem;
+}
+
+.btn-disabled {
+    background: var(--surface);
+    color: var(--text-muted);
+    border: 1px solid var(--border);
+    cursor: default;
+}
+
+.btn-disabled:hover {
+    background: var(--surface);
+    color: var(--text-muted);
+    transform: none;
+}
+
+.coming-soon {
+    font-size: 0.75rem;
+    color: var(--text-faint);
+    font-style: italic;
+}
+
+/* Divider */
+.divider {
+    width: 60px;
+    height: 1px;
+    background: var(--border);
+    margin: 4rem auto;
+}
+
+/* Features */
+.features {
+    max-width: var(--wide-width);
+    margin: 0 auto;
+    padding: 0 2rem 4rem;
+}
+
+.features-heading {
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.02em;
+}
+
+.features-sub {
+    text-align: center;
+    color: var(--text-muted);
+    margin-bottom: 3rem;
+    font-size: 1rem;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.feature-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem;
+}
+
+.feature-icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.feature-card h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem;
+    color: var(--text);
+}
+
+.feature-card p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Pitch section */
+.pitch {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 2rem 4rem;
+    text-align: center;
+}
+
+.pitch p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+.pitch a {
+    color: var(--orange);
+}
+
+.pitch a:hover {
+    color: #e09510;
+}
+
+/* Footer */
 footer {
     border-top: 1px solid var(--border);
     padding: 2rem;
@@ -152,8 +310,37 @@ footer {
 footer a {
     color: var(--text-muted);
     margin: 0 0.75rem;
+    text-decoration: none;
 }
 
 footer a:hover {
     color: var(--text);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .hero {
+        padding: 3rem 1.5rem 2rem;
+    }
+
+    .hero-wordmark {
+        height: 40px;
+    }
+
+    .hero-icon {
+        width: 80px;
+        height: 80px;
+    }
+
+    .hero-tagline {
+        font-size: 1.15rem;
+    }
+
+    .downloads {
+        flex-direction: column;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
 }

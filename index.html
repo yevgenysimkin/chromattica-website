@@ -3,23 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chromattica — Multi-Profile Browser</title>
+    <title>Chromattica — The Multi-Profile Browser</title>
+    <meta name="description" content="A multi-profile browser for people who juggle multiple accounts, identities, and workflows. Built on Chromium. Built by one guy. Weirdly good.">
+    <link rel="icon" type="image/png" href="img/icon.png">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <a href="/" class="logo">Chromattica</a>
+        <a href="/" class="logo">
+            <img src="img/icon.png" alt="Chromattica" height="28">
+        </a>
         <nav>
             <a href="/terms.html">Terms</a>
             <a href="/privacy.html">Privacy</a>
         </nav>
     </header>
 
-    <main class="hero">
-        <h1>Chromattica</h1>
-        <p>A multi-profile browser for people who juggle multiple accounts, identities, and workflows.</p>
-        <a href="https://api.chromattica.com/api/updates/download/Chromattica-latest.dmg" class="btn">Download for macOS</a>
-    </main>
+    <section class="hero">
+        <img src="img/icon.png" alt="Chromattica" class="hero-icon">
+        <br>
+        <img src="img/chromattica_wordmark.png" alt="Chromattica" class="hero-wordmark">
+        <div class="hero-ftmos">(FTMOS)</div>
+
+        <p class="hero-tagline">
+            You have seven email accounts, four Slack workspaces, and a LinkedIn you log into once a year out of guilt. Your browser wasn't built for this. Chromattica was.
+        </p>
+        <p class="hero-sub">
+            A multi-profile Chromium browser that keeps your work, personal, freelance, and "I swear this is research" lives completely separate. Each profile gets its own cookies, sessions, and apps &mdash; no cross-contamination, no logging in and out, no existential dread.
+        </p>
+
+        <div class="downloads">
+            <a href="https://api.chromattica.com/api/updates/download/Chromattica-latest.dmg" class="btn">
+                <span class="btn-icon">&#63743;</span> Download for macOS
+            </a>
+            <span class="btn btn-disabled">
+                <span class="btn-icon">&#8862;</span> Windows
+                <span class="coming-soon">&mdash; coming soon</span>
+            </span>
+            <span class="btn btn-disabled">
+                <span class="btn-icon">&#9655;</span> Linux
+                <span class="coming-soon">&mdash; coming soon</span>
+            </span>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="features">
+        <h2 class="features-heading">What makes it different</h2>
+        <p class="features-sub">It's a browser, but with opinions about how your digital life should work.</p>
+
+        <div class="feature-grid">
+            <div class="feature-card">
+                <div class="feature-icon">&#127912;</div>
+                <h3>Color-Coded Profiles</h3>
+                <p>Each profile gets its own color, avatar, and complete browser isolation. Switch between Work-You and Weekend-You without logging out of anything.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">&#128218;</div>
+                <h3>App Dock</h3>
+                <p>Pin your most-used web apps per profile. Gmail, Slack, Notion, that one internal tool with the terrible URL &mdash; they're all one click away, organized by the life they belong to.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">&#9201;</div>
+                <h3>Built-In Time Tracking</h3>
+                <p>Know exactly how long you spend in each app and profile. Great for freelancers, billable hours, or finally quantifying your doom-scrolling habit.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">&#128274;</div>
+                <h3>Password Manager Integration</h3>
+                <p>LastPass and Bitwarden built right in. No extension to install, no separate app to alt-tab to. Your credentials, where you need them.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">&#128736;</div>
+                <h3>Chromium Under the Hood</h3>
+                <p>Full Chromium engine. Your extensions work. Your bookmarks work. DevTools work. It's the browser you know, organized the way you actually use it.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">&#128171;</div>
+                <h3>Pay What You Want</h3>
+                <p>Seriously. If you can afford $25, great. If you can't, just tell me you like it and it's yours. A portion of proceeds funds <a href="https://samizdatonline.org">SamizdatOnline.org</a> &mdash; breaking through censorship walls so people in Russia and Iran can read whatever they want.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="pitch">
+        <p>
+            Chromattica is built by <strong style="color: var(--text);">one person</strong> who got tired of Chrome's "profile switcher" pretending that dropdown menu counts as a feature. It's a real app, with real engineering, maintained by a real human who reads every email you send him.
+        </p>
+        <br>
+        <p>
+            Questions? Complaints? Good jokes? <a href="mailto:genia@chromattica.com">genia@chromattica.com</a>
+        </p>
+    </section>
 
     <footer>
         <a href="/terms.html">Terms & Conditions</a>
