@@ -20,8 +20,6 @@
     </header>
 
     <section class="hero">
-        <img src="img/icon.png" alt="Chromattica" class="hero-icon">
-        <br>
         <img src="img/chromattica_wordmark.png" alt="Chromattica" class="hero-wordmark">
         <div class="hero-ftmos">(FTMOS)</div>
 
@@ -87,7 +85,7 @@
             <div class="feature-card">
                 <div class="feature-icon">&#128171;</div>
                 <h3>Pay What You Want</h3>
-                <p>Seriously. If you can afford $25, great. If you can't, just tell me you like it and it's yours. A portion of proceeds funds <a href="https://samizdatonline.org">SamizdatOnline.org</a> &mdash; breaking through censorship walls so people in Russia and Iran can read whatever they want.</p>
+                <p>Seriously. If you can afford $25, great. If you can't, just tell me you like it and it's yours. A portion of proceeds funds <a href="https://samizdatonline.org" target="_blank" rel="noopener">SamizdatOnline.org</a> &mdash; breaking through censorship walls so people in Russia and Iran can read whatever they want.</p>
             </div>
         </div>
     </section>
@@ -100,14 +98,29 @@
         </p>
         <br>
         <p>
-            Questions? Complaints? Good jokes? <a href="mailto:genia@chromattica.com">genia@chromattica.com</a>
+            Questions? Complaints? Good jokes? <a href="mailto:contact@chromattica.com">contact@chromattica.com</a>
         </p>
     </section>
+
+    <div class="reviews-track" id="reviews-track" aria-hidden="true"></div>
 
     <footer>
         <a href="/terms.html">Terms & Conditions</a>
         <a href="/privacy.html">Privacy Policy</a>
-        <p style="margin-top: 1rem;">&copy; 2025 Chromattica. All rights reserved.</p>
+        <p style="margin-top: 1rem;">&copy; 2026 Chromattica. All rights reserved.</p>
     </footer>
+
+    <script>
+        fetch('reviews.json')
+            .then(r => r.json())
+            .then(reviews => {
+                const track = document.getElementById('reviews-track');
+                const html = reviews.map(r =>
+                    `<span class="review-item">&ldquo;${r.text}&rdquo; <em>&mdash;${r.author}</em></span>`
+                ).join('');
+                // Duplicate for seamless loop
+                track.innerHTML = `<div class="reviews-scroll">${html}${html}</div>`;
+            });
+    </script>
 </body>
 </html>
